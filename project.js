@@ -2,7 +2,6 @@
 const movieDisplay = document.getElementById("movieDisplay")
 
 
-
 function displayMovies() {
     fetch("https://swapi.dev/api/films/")
     .then(response => response.json())
@@ -20,6 +19,4 @@ function displayMovies() {
 
 }
 displayMovies()
-
-4
 
