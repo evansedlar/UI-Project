@@ -1,24 +1,38 @@
 
 const movieDisplay = document.getElementById("movieDisplay")
+const homeButton = document.getElementById("homeButton")
+const planetsButton = document.getElementById("planetsButton")
+const speciesButton = document.getElementById("speciesButton")
+const charactersButton = document.getElementById("charactersButton")
+const vehiclesButton = document.getElementById("vehiclesButton")
+const starshipsButton = document.getElementById("starshipsButton")
+const pageContents = document.getElementById('pageContents')
 
 
+homeButton.addEventListener('click', function() {
+    window.location.href = "project.html";
+})
 
-function displayMovies() {
-    fetch("https://swapi.dev/api/films/")
-    .then(response => response.json())
-    .then(movies => {
-        const x = movies.results
-        const movieList = x.map(function(movie) {
-            return `
-                <h1>${movie.title}</h1>
-                <a href="https://m.media-amazon.com/images/I/81P3lDJbjCL.jpg"><img src="https://m.media-amazon.com/images/I/81P3lDJbjCL.jpg" width="200px"></img></a>
-            `
-            
+
+planetsButton.addEventListener('click', function() {
+    function displayPlanets() {
+        movieDisplay.innerHTML = ""
+        fetch("https://swapi.dev/api/planets/")
+        .then(response => response.json())
+        .then(planetsArr => {
+            const planets = planetsArr.results
+            const planetsList = planets.map(function(planet) {
+                return `
+                <ul id="planetInfo">
+                    <h1>Planet: ${planet.name}</h1>
+                    <li>Climate: ${planet.climate}</li>
+                    <li>Terrain: ${planet.terrain}</li>
+                    <li>Population: ${planet.population}</li>
+                </ul>
+                `
+            })
+            pageContents.innerHTML = planetsList.join("")
         })
-        movieDisplay.innerHTML = movieList.join("")
-    })
-
-}
-displayMovies()
-
-
+    }
+    displayPlanets()
+})
