@@ -1,22 +1,32 @@
-
 const movieDisplay = document.getElementById("movieDisplay")
+const imageList = document.getElementById('movieImg')
+const images = Array.from(imageList.getElementsByTagName('img'))
+let currentImageIndex = 0
+const numImgToShow = 3
 
-
-function displayMovies() {
-    fetch("https://swapi.dev/api/films/")
-    .then(response => response.json())
-    .then(movies => {
-        const x = movies.results
-        const movieList = x.map(function(movie) {
-            return `
-                <h1>${movie.title}</h1>
-                <a href="https://m.media-amazon.com/images/I/81P3lDJbjCL.jpg"><img src="https://m.media-amazon.com/images/I/81P3lDJbjCL.jpg" width="200px"></img></a>
-            `
-            
-        })
-        movieDisplay.innerHTML = movieList.join("")
-    })
-
+for(let i = 0; i < images.length; i++) {
+    if (i >= numImgToShow) { 
+        images[i].style.display = 'none'
+    }
 }
-displayMovies()
+
+showImages()
+
+function showImages() {
+    for (let i = currentImageIndex; i < currentImageIndex + numImgToShow; i++) {
+        if( i >= images.length) {
+            currentImageIndex = 0;
+            i = currentImageIndex;
+        }
+        images[i].style.display = 'inline-block';
+    }
+    for (let i = currentImageIndex - numImgToShow; i < currentImageIndex; i++) {
+        if (i < 0) {
+            i = images.length - numImgToShow;
+        }
+        images[i].style.display = 'none';
+    }
+    currentImageIndex += numImgToShow;
+    setTimeout(showImages, 5000);
+}
 
