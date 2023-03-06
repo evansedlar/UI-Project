@@ -1,7 +1,30 @@
 #movieDisplay {
     display: flex;
-}
-
-li {
-    display: flex
-}
+  }
+  
+  #loading-screen {
+    position: relative;
+    margin-top: 50px; /* add margin to move the loading screen below the navbar */
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spinner {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
