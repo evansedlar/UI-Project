@@ -8,6 +8,8 @@ const starshipsButton = document.getElementById("starshipsButton")
 const pageContents = document.getElementById('pageContents')
 const imageList = document.getElementById('movieImg')
 const loadingScreen = document.getElementById('loading-screen')
+const next = document.getElementById('next')
+const prev = document.getElementById('prev')
 const images = Array.from(imageList.getElementsByTagName('img'))
 let currentImageIndex = 0
 const numImgToShow = 3
@@ -21,7 +23,7 @@ homeButton.addEventListener('click', function () {
 })
 
 // Planets Button
-planetsButton.addEventListener('click', function () {
+planetsButton.addEventListener('click', function() {
     function displayPlanets() {
         movieImg.innerHTML = ""
         pageContents.innerHTML = ""
@@ -209,6 +211,11 @@ for (let i = 0; i < images.length; i++) {
 
 
 function showImages() {
+    for(let i = 0; i < images.length; i++) {
+        if (i >= numImgToShow) { 
+            images[i].style.display = 'none'
+        }
+    }
     for (let i = currentImageIndex; i < currentImageIndex + numImgToShow; i++) {
         if (i >= images.length) {
             currentImageIndex = 0;
@@ -223,7 +230,8 @@ function showImages() {
         images[i].style.display = 'none';
     }
     currentImageIndex += numImgToShow;
-    setTimeout(showImages, 5000);
 }
 
 showImages()
+next.addEventListener('click', showImages)
+prev.addEventListener('click', showImages)
