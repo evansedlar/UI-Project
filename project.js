@@ -19,6 +19,7 @@ homeButton.addEventListener('click', function() {
 planetsButton.addEventListener('click', function() {
     function displayPlanets() {
         movieImg.innerHTML = ""
+        pageContents.innerHTML = ""
         fetch("https://swapi.dev/api/planets/")
         .then(response => response.json())
         .then(planetsArr => {
