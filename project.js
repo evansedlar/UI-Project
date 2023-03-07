@@ -33,9 +33,38 @@ const movie1 = document.getElementById('movie1')
 const movie2 = document.getElementById('movie2')
 const movie3 = document.getElementById('movie3')
 
-movie4.addEventListener('click', function () {
-    
-})
+
+movie4.onclick = function() {
+    movieImg.innerHTML = ""
+    fetch("https://swapi.dev/api/films/1/")
+    .then(response => response.json())
+    .then(movie4Arr => {
+        const movieInfo = document.createElement('div')
+        movieInfo.innerHTML = `
+            <h1>${movie4Arr.title}</h1>
+            <p>Director: ${movie4Arr.director}</p>
+            <p>Release Date: ${movie4Arr.release_date}</p>
+            <p>Opening Crawl: ${movie4Arr.opening_crawl}</p>
+        `
+    pageContents.appendChild(movieInfo)
+    })
+}
+movie5.onclick = function() {
+    movieImg.innerHTML = ""
+    fetch("https://swapi.dev/api/films/2/")
+    .then(response => response.json())
+    .then(movie5Arr => {
+        const movieInfo = document.createElement('div')
+        movieInfo.innerHTML = `
+            <h1>${movie5Arr.title}</h1>
+            <p>Director: ${movie5Arr.director}</p>
+            <p>Release Date: ${movie5Arr.release_date}</p>
+            <p>Opening Crawl: ${movie5Arr.opening_crawl}</p>
+        `
+    pageContents.appendChild(movieInfo)
+    })
+}
+
 
 // Planets Button
 planetsButton.addEventListener('click', function() {
