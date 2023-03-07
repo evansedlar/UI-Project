@@ -15,7 +15,18 @@ homeButton.addEventListener('click', function() {
     window.location.href = "project.html";
 })
 
+const movie4 = document.getElementById('movie4')
+const movie5 = document.getElementById('movie5')
+const movie6 = document.getElementById('movie6')
+const movie1 = document.getElementById('movie1')
+const movie2 = document.getElementById('movie2')
+const movie3 = document.getElementById('movie3')
 
+movie4.addEventListener('click', function () {
+    
+})
+
+// Planets Button
 planetsButton.addEventListener('click', function() {
     function displayPlanets() {
         movieImg.innerHTML = ""
@@ -66,4 +77,8 @@ function showImages() {
     currentImageIndex += numImgToShow;
     setTimeout(showImages, 5000);
 }
+
+showImages()
+next.addEventListener('click', showImages)
+prev.addEventListener('click', showImages)
 
