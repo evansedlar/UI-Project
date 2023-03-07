@@ -263,7 +263,7 @@ function speciesPage2() {
     pageContents.innerHTML = ""
     buttonContainer.innerHTML = ""
     loadingScreen.style.display = "block"
-    fetch("https://swapi.dev/api/species?page=2")
+    fetch("https://swapi.dev/api/species/?page=2")
     .then(response => response.json())
     .then(planetsArr => {
         const nextSpecies3 = `<button onclick="speciesPage3()">Next Page</button>`
@@ -288,7 +288,7 @@ function speciesPage3() {
     pageContents.innerHTML = ""
     buttonContainer.innerHTML = ""
     loadingScreen.style.display = "block"
-    fetch("https://swapi.dev/api/species?page=3")
+    fetch("https://swapi.dev/api/species/?page=3")
     .then(response => response.json())
     .then(planetsArr => {
         const nextSpecies4 = `<button onclick="speciesPage4()">Next Page</button>`
@@ -313,7 +313,7 @@ function speciesPage4() {
     pageContents.innerHTML = ""
     buttonContainer.innerHTML = ""
     loadingScreen.style.display = "block"
-    fetch("https://swapi.dev/api/species?page=4")
+    fetch("https://swapi.dev/api/species/?page=4")
     .then(response => response.json())
     .then(planetsArr => {
         const planets = planetsArr.results
@@ -332,7 +332,7 @@ function speciesPage4() {
     })
 }
 
-//Characters Button
+//Characters Button 1-9
 charactersButton.addEventListener('click', function () {
     function displayCharacters() {
         movieImg.innerHTML = ""
@@ -341,6 +341,7 @@ charactersButton.addEventListener('click', function () {
         fetch("https://swapi.dev/api/people/")
             .then(response => response.json())
             .then(charactersArr => {
+                const nextCharacters2 = `<button onclick="charactersPage2()">Next Page</button>`
                 const characters = charactersArr.results
                 const charactersList = characters.map(function (character) {
                     return `
@@ -355,7 +356,7 @@ charactersButton.addEventListener('click', function () {
                 `
                 })
                 pageContents.innerHTML = charactersList.join("")
-
+                buttonContainer.innerHTML = nextCharacters2
                 loadingScreen.style.display = "none"
             })
             .catch(error => {
@@ -365,6 +366,220 @@ charactersButton.addEventListener('click', function () {
     }
     displayCharacters()
 })
+
+function charactersPage2() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/people/?page=2")
+    .then(response => response.json())
+    .then(charactersArr => {
+        const nextCharacters3 = `<button onclick="charactersPage3()">Next Page</button>`
+        const characters = charactersArr.results
+        const charactersList = characters.map(function (character) {
+            return `
+            <ul id="planetInfo">
+                <h1>${character.name}</h1>
+                <li>Height: ${character.height}cm</li>
+                <li>Hair Color: ${character.hair_color}</li>
+                <li>Eye Color: ${character.eye_color}</li>
+                <li>Birth Year: ${character.birth_year}</li>
+                <li>Gender: ${character.gender}</li>
+            </ul>
+            `  
+        })
+        pageContents.innerHTML = charactersList.join("")
+        buttonContainer.innerHTML = nextCharacters3
+        loadingScreen.style.display = "none"
+    })
+}
+
+function charactersPage3() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/people/?page=3")
+    .then(response => response.json())
+    .then(charactersArr => {
+        const nextCharacters4 = `<button onclick="charactersPage4()">Next Page</button>`
+        const characters = charactersArr.results
+        const charactersList = characters.map(function (character) {
+            return `
+            <ul id="planetInfo">
+                <h1>${character.name}</h1>
+                <li>Height: ${character.height}cm</li>
+                <li>Hair Color: ${character.hair_color}</li>
+                <li>Eye Color: ${character.eye_color}</li>
+                <li>Birth Year: ${character.birth_year}</li>
+                <li>Gender: ${character.gender}</li>
+            </ul>
+            `  
+        })
+        pageContents.innerHTML = charactersList.join("")
+        buttonContainer.innerHTML = nextCharacters4
+        loadingScreen.style.display = "none"
+    })
+}
+
+function charactersPage4() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/people/?page=4")
+    .then(response => response.json())
+    .then(charactersArr => {
+        const nextCharacters5 = `<button onclick="charactersPage5()">Next Page</button>`
+        const characters = charactersArr.results
+        const charactersList = characters.map(function (character) {
+            return `
+            <ul id="planetInfo">
+                <h1>${character.name}</h1>
+                <li>Height: ${character.height}cm</li>
+                <li>Hair Color: ${character.hair_color}</li>
+                <li>Eye Color: ${character.eye_color}</li>
+                <li>Birth Year: ${character.birth_year}</li>
+                <li>Gender: ${character.gender}</li>
+            </ul>
+            `  
+        })
+        pageContents.innerHTML = charactersList.join("")
+        buttonContainer.innerHTML = nextCharacters5
+        loadingScreen.style.display = "none"
+    })
+}
+
+function charactersPage5() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/people/?page=5")
+    .then(response => response.json())
+    .then(charactersArr => {
+        const nextCharacters6 = `<button onclick="charactersPage6()">Next Page</button>`
+        const characters = charactersArr.results
+        const charactersList = characters.map(function (character) {
+            return `
+            <ul id="planetInfo">
+                <h1>${character.name}</h1>
+                <li>Height: ${character.height}cm</li>
+                <li>Hair Color: ${character.hair_color}</li>
+                <li>Eye Color: ${character.eye_color}</li>
+                <li>Birth Year: ${character.birth_year}</li>
+                <li>Gender: ${character.gender}</li>
+            </ul>
+            `  
+        })
+        pageContents.innerHTML = charactersList.join("")
+        buttonContainer.innerHTML = nextCharacters6
+        loadingScreen.style.display = "none"
+    })
+}
+
+function charactersPage6() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/people/?page=6")
+    .then(response => response.json())
+    .then(charactersArr => {
+        const nextCharacters7 = `<button onclick="charactersPage7()">Next Page</button>`
+        const characters = charactersArr.results
+        const charactersList = characters.map(function (character) {
+            return `
+            <ul id="planetInfo">
+                <h1>${character.name}</h1>
+                <li>Height: ${character.height}cm</li>
+                <li>Hair Color: ${character.hair_color}</li>
+                <li>Eye Color: ${character.eye_color}</li>
+                <li>Birth Year: ${character.birth_year}</li>
+                <li>Gender: ${character.gender}</li>
+            </ul>
+            `  
+        })
+        pageContents.innerHTML = charactersList.join("")
+        buttonContainer.innerHTML = nextCharacters7
+        loadingScreen.style.display = "none"
+    })
+}
+
+function charactersPage7() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/people/?page=7")
+    .then(response => response.json())
+    .then(charactersArr => {
+        const nextCharacters8 = `<button onclick="charactersPage8()">Next Page</button>`
+        const characters = charactersArr.results
+        const charactersList = characters.map(function (character) {
+            return `
+            <ul id="planetInfo">
+                <h1>${character.name}</h1>
+                <li>Height: ${character.height}cm</li>
+                <li>Hair Color: ${character.hair_color}</li>
+                <li>Eye Color: ${character.eye_color}</li>
+                <li>Birth Year: ${character.birth_year}</li>
+                <li>Gender: ${character.gender}</li>
+            </ul>
+            `  
+        })
+        pageContents.innerHTML = charactersList.join("")
+        buttonContainer.innerHTML = nextCharacters8
+        loadingScreen.style.display = "none"
+    })
+}
+
+function charactersPage8() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/people/?page=8")
+    .then(response => response.json())
+    .then(charactersArr => {
+        const nextCharacters9 = `<button onclick="charactersPage9()">Next Page</button>`
+        const characters = charactersArr.results
+        const charactersList = characters.map(function (character) {
+            return `
+            <ul id="planetInfo">
+                <h1>${character.name}</h1>
+                <li>Height: ${character.height}cm</li>
+                <li>Hair Color: ${character.hair_color}</li>
+                <li>Eye Color: ${character.eye_color}</li>
+                <li>Birth Year: ${character.birth_year}</li>
+                <li>Gender: ${character.gender}</li>
+            </ul>
+            `  
+        })
+        pageContents.innerHTML = charactersList.join("")
+        buttonContainer.innerHTML = nextCharacters9
+        loadingScreen.style.display = "none"
+    })
+}
+
+function charactersPage9() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/people/?page=9")
+    .then(response => response.json())
+    .then(charactersArr => {
+        const characters = charactersArr.results
+        const charactersList = characters.map(function (character) {
+            return `
+            <ul id="planetInfo">
+                <h1>${character.name}</h1>
+                <li>Height: ${character.height}cm</li>
+                <li>Hair Color: ${character.hair_color}</li>
+                <li>Eye Color: ${character.eye_color}</li>
+                <li>Birth Year: ${character.birth_year}</li>
+                <li>Gender: ${character.gender}</li>
+            </ul>
+            `  
+        })
+        pageContents.innerHTML = charactersList.join("")
+        loadingScreen.style.display = "none"
+    })
+}
 
 
 //Vehicles Button
@@ -376,6 +591,7 @@ vehiclesButton.addEventListener('click', function () {
         fetch("https://swapi.dev/api/vehicles/")
             .then(response => response.json())
             .then(vehiclesArr => {
+                const nextVehicles2 = `<button onclick="vehiclesPage2()">Next Page</button>`
                 const vehicles = vehiclesArr.results
                 const vehiclesList = vehicles.map(function (vehicle) {
                     return `
@@ -390,7 +606,7 @@ vehiclesButton.addEventListener('click', function () {
                 `
                 })
                 pageContents.innerHTML = vehiclesList.join("")
-
+                buttonContainer.innerHTML = nextVehicles2
                 loadingScreen.style.display = "none"
             })
             .catch(error => {
@@ -400,6 +616,86 @@ vehiclesButton.addEventListener('click', function () {
     }
     displayVehicles()
 })
+
+function vehiclesPage2() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/vehicles/?page=2")
+    .then(response => response.json())
+    .then(vehiclesArr => {
+        const nextVehicles3 = `<button onclick="vehiclesPage3()">Next Page</button>`
+        const vehicles = vehiclesArr.results
+        const vehiclesList = vehicles.map(function (vehicle) {
+            return `
+            <ul id="planetInfo">
+                <h1>${vehicle.name}</h1>
+                <li>Model: ${vehicle.model}</li>
+                <li>Manufacturer: ${vehicle.manufacturer}</li>
+                <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
+                <li>Vehicle Class: ${vehicle.vehicle_class}</li>
+                <li>Crew Size: ${vehicle.crew}</li>
+            </ul>
+            ` 
+        })
+        pageContents.innerHTML = vehiclesList.join("")
+        buttonContainer.innerHTML = nextVehicles3
+        loadingScreen.style.display = "none"
+    })
+
+}
+
+function vehiclesPage3() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/vehicles/?page=3")
+    .then(response => response.json())
+    .then(vehiclesArr => {
+        const nextVehicles4 = `<button onclick="vehiclesPage4()">Next Page</button>`
+        const vehicles = vehiclesArr.results
+        const vehiclesList = vehicles.map(function (vehicle) {
+            return `
+            <ul id="planetInfo">
+                <h1>${vehicle.name}</h1>
+                <li>Model: ${vehicle.model}</li>
+                <li>Manufacturer: ${vehicle.manufacturer}</li>
+                <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
+                <li>Vehicle Class: ${vehicle.vehicle_class}</li>
+                <li>Crew Size: ${vehicle.crew}</li>
+            </ul>
+            ` 
+        })
+        pageContents.innerHTML = vehiclesList.join("")
+        buttonContainer.innerHTML = nextVehicles4
+        loadingScreen.style.display = "none"
+    })
+}
+
+function vehiclesPage4() {
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/vehicles/?page=4")
+    .then(response => response.json())
+    .then(vehiclesArr => {
+        const vehicles = vehiclesArr.results
+        const vehiclesList = vehicles.map(function (vehicle) {
+            return `
+            <ul id="planetInfo">
+                <h1>${vehicle.name}</h1>
+                <li>Model: ${vehicle.model}</li>
+                <li>Manufacturer: ${vehicle.manufacturer}</li>
+                <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
+                <li>Vehicle Class: ${vehicle.vehicle_class}</li>
+                <li>Crew Size: ${vehicle.crew}</li>
+            </ul>
+            ` 
+        })
+        pageContents.innerHTML = vehiclesList.join("")
+        loadingScreen.style.display = "none"
+    })
+}
 
 
 //Starships Button
@@ -411,6 +707,7 @@ starshipsButton.addEventListener('click', function () {
         fetch("https://swapi.dev/api/starships/")
             .then(response => response.json())
             .then(starshipsArr => {
+                const nextStarships2 = `<button onclick="starshipsPage2()">Next Page</button>`
                 const starships = starshipsArr.results
                 const starshipsList = starships.map(function (starship) {
                     return `
@@ -425,7 +722,7 @@ starshipsButton.addEventListener('click', function () {
                 `
                 })
                 pageContents.innerHTML = starshipsList.join("")
-
+                buttonContainer.innerHTML = nextStarships2
                 loadingScreen.style.display = "none"
             })
             .catch(error => {
@@ -436,7 +733,85 @@ starshipsButton.addEventListener('click', function () {
     displayStarships()
 })
 
+function starshipsPage2() {
+    movieImg.innerHTML = ""
+    pageContents.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/starships/?page=2")
+    .then(response => response.json())
+    .then(starshipsArr => {
+        const nextStarships3 = `<button onclick="starshipsPage3()">Next Page</button>`
+        const starships = starshipsArr.results
+        const starshipsList = starships.map(function (starship) {
+            return `
+            <ul id="planetInfo">
+                <h1>${starship.name}</h1>
+                <li>Model: ${starship.model}</li>
+                <li>Manufacturer: ${starship.manufacturer}</li>
+                <li>Cost in Credits: ${starship.cost_in_credits}</li>
+                <li>Vehicle Class: ${starship.starship_class}</li>
+                <li>Crew Size: ${starship.crew}</li>
+            </ul>
+            `
+        })
+        pageContents.innerHTML = starshipsList.join("")
+        buttonContainer.innerHTML = nextStarships3
+        loadingScreen.style.display = "none"
+    })
+}
 
+function starshipsPage3() {
+    movieImg.innerHTML = ""
+    pageContents.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/starships/?page=3")
+    .then(response => response.json())
+    .then(starshipsArr => {
+        const nextStarships4 = `<button onclick="starshipsPage4()">Next Page</button>`
+        const starships = starshipsArr.results
+        const starshipsList = starships.map(function (starship) {
+            return `
+            <ul id="planetInfo">
+                <h1>${starship.name}</h1>
+                <li>Model: ${starship.model}</li>
+                <li>Manufacturer: ${starship.manufacturer}</li>
+                <li>Cost in Credits: ${starship.cost_in_credits}</li>
+                <li>Vehicle Class: ${starship.starship_class}</li>
+                <li>Crew Size: ${starship.crew}</li>
+            </ul>
+            `
+        })
+        pageContents.innerHTML = starshipsList.join("")
+        buttonContainer.innerHTML = nextStarships4
+        loadingScreen.style.display = "none"
+    })
+}
+
+function starshipsPage4() {
+    movieImg.innerHTML = ""
+    pageContents.innerHTML = ""
+    buttonContainer.innerHTML = ""
+    loadingScreen.style.display = "block"
+    fetch("https://swapi.dev/api/starships/?page=4")
+    .then(response => response.json())
+    .then(starshipsArr => {
+        const starships = starshipsArr.results
+        const starshipsList = starships.map(function (starship) {
+            return `
+            <ul id="planetInfo">
+                <h1>${starship.name}</h1>
+                <li>Model: ${starship.model}</li>
+                <li>Manufacturer: ${starship.manufacturer}</li>
+                <li>Cost in Credits: ${starship.cost_in_credits}</li>
+                <li>Vehicle Class: ${starship.starship_class}</li>
+                <li>Crew Size: ${starship.crew}</li>
+            </ul>
+            `
+        })
+        pageContents.innerHTML = starshipsList.join("")
+        loadingScreen.style.display = "none"
+    })
+}
 
 
 for (let i = 0; i < images.length; i++) {
