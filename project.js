@@ -34,92 +34,105 @@ movie4.onclick = function() {
     movieImg.innerHTML = ""
     fetch("https://swapi.dev/api/films/1/")
     .then(response => response.json())
-    .then(movie4Arr => {
-        const homePage = 
+    .then(movieArr => {
+        const homeButton = `<button onclick="homePage()">Back</button>`
         const movieInfo = document.createElement('div')
         movieInfo.innerHTML = `
-            <h1>${movie4Arr.title}</h1>
-            <p>Director: ${movie4Arr.director}</p>
-            <p>Release Date: ${movie4Arr.release_date}</p>
-            <p>Opening Crawl: ${movie4Arr.opening_crawl}</p>
+            <h1>EPISODE ${movieArr.episode_id}: ${movieArr.title}</h1>
+            <p>Director: ${movieArr.director}</p>
+            <p>Release Date: ${movieArr.release_date}</p>
+            <p>Opening Crawl: ${movieArr.opening_crawl}</p>
         `
     pageContents.appendChild(movieInfo)
+    buttonContainer.innerHTML = homeButton
     })
 }
 movie5.onclick = function() {
     movieImg.innerHTML = ""
     fetch("https://swapi.dev/api/films/2/")
     .then(response => response.json())
-    .then(movie5Arr => {
+    .then(movieArr => {
+        const homeButton = `<button onclick="homePage()">Back</button>`
+
         const movieInfo = document.createElement('div')
         movieInfo.innerHTML = `
-            <h1>${movie5Arr.title}</h1>
-            <p>Director: ${movie5Arr.director}</p>
-            <p>Release Date: ${movie5Arr.release_date}</p>
-            <p>Opening Crawl: ${movie5Arr.opening_crawl}</p>
+            <h1>EPISODE ${movieArr.episode_id}: ${movieArr.title}</h1>
+            <p>Director: ${movieArr.director}</p>
+            <p>Release Date: ${movieArr.release_date}</p>
+            <p>Opening Crawl: ${movieArr.opening_crawl}</p>
         `
     pageContents.appendChild(movieInfo)
+    buttonContainer.innerHTML = homeButton
     })
 }
-
 movie6.onclick = function() {
     movieImg.innerHTML = ""
     fetch("https://swapi.dev/api/films/3/")
     .then(response => response.json())
-    .then(movie6Arr => {
+    .then(movieArr => {
+        const homeButton = `<button onclick="homePage()">Back</button>`
         const movieInfo = document.createElement('div')
         movieInfo.innerHTML = `
-        <h1>${movie6Arr.title}</h1>
-        <p>Director: ${movie6Arr.director}</p>
-        <p>Release Date: ${movie6Arr.release_date}</p>
-        <p>Opening Crawl: ${movie6Arr.opening_crawl}</p>
+            <h1>EPISODE ${movieArr.episode_id}: ${movieArr.title}</h1>
+            <p>Director: ${movieArr.director}</p>
+            <p>Release Date: ${movieArr.release_date}</p>
+            <p>Opening Crawl: ${movieArr.opening_crawl}</p>
         `
     pageContents.appendChild(movieInfo)
+    buttonContainer.innerHTML = homeButton
     })
 }
-
 movie1.onclick = function() {
+    movieImg.innerHTML = ""
     fetch("https://swapi.dev/api/films/4/")
     .then(response => response.json())
-    .then(movie1Arr => {
+    .then(movieArr => {
+        const homeButton = `<button onclick="homePage()">Back</button>`
         const movieInfo = document.createElement('div')
         movieInfo.innerHTML = `
-        <h1>${movie1Arr.title}</h1>
-        <p>Director: ${movie1Arr.director}</p>
-        <p>Release Date: ${movie1Arr.release_date}</p>
-        <p>Opening Crawl: ${movie1Arr.opening_crawl}</p>
+            <h1>EPISODE ${movieArr.episode_id}: ${movieArr.title}</h1>
+            <p>Director: ${movieArr.director}</p>
+            <p>Release Date: ${movieArr.release_date}</p>
+            <p>Opening Crawl: ${movieArr.opening_crawl}</p>
         `
     pageContents.appendChild(movieInfo)
+    buttonContainer.innerHTML = homeButton
     })
 }
-
 movie2.onclick = function() {
+    movieImg.innerHTML = ""
     fetch("https://swapi.dev/api/films/5/")
     .then(response => response.json())
-    .then(movie2Arr => {
+    .then(movieArr => {
+        const homeButton = `<button onclick="homePage()">Back</button>`
         const movieInfo = document.createElement('div')
         movieInfo.innerHTML = `
-        <h1>${movie2Arr.title}</h1>
-        <p>Director: ${movie2Arr.director}</p>
-        <p>Release Date: ${movie2Arr.release_date}</p>
-        <p>Opening Crawl: ${movie2Arr.opening_crawl}</p>
+            <h1>EPISODE ${movieArr.episode_id}: ${movieArr.title}</h1>
+            <p>Director: ${movieArr.director}</p>
+            <p>Release Date: ${movieArr.release_date}</p>
+            <p>Opening Crawl: ${movieArr.opening_crawl}</p>
+            <p> </p>
         `
     pageContents.appendChild(movieInfo)
+    buttonContainer.innerHTML = homeButton
     })
 }
-
 movie3.onclick = function() {
+    movieImg.innerHTML = ""
     fetch("https://swapi.dev/api/films/6/")
     .then(response => response.json())
-    .then(movie3Arr => {
+    .then(movieArr => {
+        const homeButton = `<button onclick="homePage()">Back</button>`
+        const nextMovie = `<button onclick="">Next</button>`
         const movieInfo = document.createElement('div')
         movieInfo.innerHTML = `
-        <h1>${movie3Arr.title}</h1>
-        <p>Director: ${movie3Arr.director}</p>
-        <p>Release Date: ${movie3Arr.release_date}</p>
-        <p>Opening Crawl: ${movie3Arr.opening_crawl}</p>
+            <h1>EPISODE ${movieArr.episode_id}: ${movieArr.title}</h1>
+            <p>Director: ${movieArr.director}</p>
+            <p>Release Date: ${movieArr.release_date}</p>
+            <p>Opening Crawl: ${movieArr.opening_crawl}</p>
         `
-        pageContents.appendChild(movieInfo)
+    pageContents.appendChild(movieInfo)
+    buttonContainer.innerHTML = homeButton
     })
 }
 
