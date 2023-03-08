@@ -65,6 +65,23 @@ movie5.onclick = function() {
     })
 }
 
+movie6.onclick = function() {
+    movieImg.innerHTML = ""
+    fetch("https://swapi.dev/api/films/3/")
+    .then(response => response.json())
+    .then(movie6Arr => {
+        const movieInfo = document.createElement('div')
+        movieInfo.innerHTML = `
+        <h1>${movie6Arr.title}</h1>
+        <p>Director: ${movie6Arr.director}</p>
+        <p>Release Date: ${movie6Arr.release_date}</p>
+        <p>Opening Crawl: ${movie6Arr.opening_crawl}</p>
+        `
+    pageContents.appendChild(movieInfo)
+    })
+}
+
+
 
 // Planets Button
 planetsButton.addEventListener('click', function() {
