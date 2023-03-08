@@ -89,6 +89,51 @@ movie6.onclick = function() {
     })
 }
 
+movie1.onclick = function() {
+    fetch("https://swapi.dev/api/films/4/")
+    .then(response => response.json())
+    .then(movie1Arr => {
+        const movieInfo = document.createElement('div')
+        movieInfo.innerHTML = `
+        <h1>${movie1Arr.title}</h1>
+        <p>Director: ${movie1Arr.director}</p>
+        <p>Release Date: ${movie1Arr.release_date}</p>
+        <p>Opening Crawl: ${movie1Arr.opening_crawl}</p>
+        `
+    pageContents.appendChild(movieInfo)
+    })
+}
+
+movie2.onclick = function() {
+    fetch("https://swapi.dev/api/films/5/")
+    .then(response => response.json())
+    .then(movie2Arr => {
+        const movieInfo = document.createElement('div')
+        movieInfo.innerHTML = `
+        <h1>${movie2Arr.title}</h1>
+        <p>Director: ${movie2Arr.director}</p>
+        <p>Release Date: ${movie2Arr.release_date}</p>
+        <p>Opening Crawl: ${movie2Arr.opening_crawl}</p>
+        `
+    pageContents.appendChild(movieInfo)
+    })
+}
+
+movie3.onclick = function() {
+    fetch("https://swapi.dev/api/films/6/")
+    .then(response => response.json())
+    .then(movie3Arr => {
+        const movieInfo = document.createElement('div')
+        movieInfo.innerHTML = `
+        <h1>${movie3Arr.title}</h1>
+        <p>Director: ${movie3Arr.director}</p>
+        <p>Release Date: ${movie3Arr.release_date}</p>
+        <p>Opening Crawl: ${movie3Arr.opening_crawl}</p>
+        `
+        pageContents.appendChild(movieInfo)
+    })
+}
+
 // Planets Button
 planetsButton.addEventListener('click', displayPlanets)
 
