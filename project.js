@@ -236,20 +236,20 @@ function speciesPage2() {
     loadingScreen.style.display = "block"
     fetch("https://swapi.dev/api/species/?page=2")
     .then(response => response.json())
-    .then(planetsArr => {
+    .then(speciesArr => {
         const nextSpecies3 = `<button onclick="speciesPage3()">Next Page</button>`
-        const planets = planetsArr.results
-        const planetsList = planets.map(function (planet) {
+        const species = speciesArr.results
+        const speciesList = species.map(function (specie) {
             return `
-        <ul>
-            <h1>${planet.name}</h1>
-            <li>Climate: ${planet.climate}</li>
-            <li>Terrain: ${planet.terrain}</li>
-            <li>Population: ${planet.population}</li>
+            <ul id="planetInfo">
+            <h1>${specie.name}</h1>
+            <li>Homeworld: ${specie.homeworld}</li>
+            <li>Language: ${specie.language}</li>
+            <a href="${specie.people}">Characters of this species</a>
         </ul>
             `
         })
-        pageContents.innerHTML = planetsList.join("")
+        pageContents.innerHTML = speciesList.join("")
         buttonContainer.innerHTML = nextSpecies3
         loadingScreen.style.display = "none"
     })
@@ -261,20 +261,20 @@ function speciesPage3() {
     loadingScreen.style.display = "block"
     fetch("https://swapi.dev/api/species/?page=3")
     .then(response => response.json())
-    .then(planetsArr => {
+    .then(speciesArr => {
         const nextSpecies4 = `<button onclick="speciesPage4()">Next Page</button>`
-        const planets = planetsArr.results
-        const planetsList = planets.map(function (planet) {
+        const species = speciesArr.results
+        const speciesList = species.map(function (specie) {
             return `
-        <ul>
-            <h1>${planet.name}</h1>
-            <li>Climate: ${planet.climate}</li>
-            <li>Terrain: ${planet.terrain}</li>
-            <li>Population: ${planet.population}</li>
+            <ul id="planetInfo">
+            <h1>${specie.name}</h1>
+            <li>Homeworld: ${specie.homeworld}</li>
+            <li>Language: ${specie.language}</li>
+            <a href="${specie.people}">Characters of this species</a>
         </ul>
             `
         })
-        pageContents.innerHTML = planetsList.join("")
+        pageContents.innerHTML = speciesList.join("")
         buttonContainer.innerHTML = nextSpecies4
         loadingScreen.style.display = "none"
     })
@@ -286,19 +286,19 @@ function speciesPage4() {
     loadingScreen.style.display = "block"
     fetch("https://swapi.dev/api/species/?page=4")
     .then(response => response.json())
-    .then(planetsArr => {
-        const planets = planetsArr.results
-        const planetsList = planets.map(function (planet) {
+    .then(speciesArr => {
+        const species = speciesArr.results
+        const speciesList = species.map(function (specie) {
             return `
-        <ul>
-            <h1>${planet.name}</h1>
-            <li>Climate: ${planet.climate}</li>
-            <li>Terrain: ${planet.terrain}</li>
-            <li>Population: ${planet.population}</li>
+            <ul id="planetInfo">
+            <h1>${specie.name}</h1>
+            <li>Homeworld: ${specie.homeworld}</li>
+            <li>Language: ${specie.language}</li>
+            <a href="${specie.people}">Characters of this species</a>
         </ul>
             `
         })
-        pageContents.innerHTML = planetsList.join("")
+        pageContents.innerHTML = speciesList.join("")
         loadingScreen.style.display = "none"
     })
 }
