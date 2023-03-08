@@ -235,11 +235,17 @@
     justify-content: center;
   }
 
-   #prev,
-  #next {
+   #prev {
     position: relative;
     margin: 10px;
   } 
+  #next {
+    opacity: .4;
+    right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 1px;
+  }
 }
 
  @media (min-width: 768px) { 
