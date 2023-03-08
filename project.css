@@ -113,7 +113,6 @@ html {
 
   
 }
-
 #loading-screen {
   position: relative;
   margin-top: 50px;
@@ -126,7 +125,6 @@ html {
   justify-content: center;
   align-items: center;
 }
-
 .spinner {
   border: 5px solid rgba(0, 0, 0, 0.1);
   border-top-color: #007bff;
@@ -135,34 +133,28 @@ html {
   height: 50px;
   animation: spin 1s ease-in-out infinite;
 }
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
-
 #movie {
   position: absolute;
   /* margin: auto; */
   /* justify-content: center; */
   width: 100vw;
 }
-
 #pic {
   border-radius: 10px 10px 10px 10px;
 }
-
 @keyframes fade {
   from {
     opacity: .4
   }
-
   to {
     opacity: 1
   }
 }
-
 #prev,
 #next {
   cursor: pointer;
@@ -208,7 +200,7 @@ html {
 }
 
 #movieImg img {
-  max-width: 32%;
+  max-width: 30%;
   justify-content: center;
 }
 
@@ -217,9 +209,6 @@ html {
   #movieImg {
     flex-wrap: wrap;
     justify-content: center;
-  }
-  html {
-    overflow-y: visible;
   }
   #movieImg img {
     max-width: 50%;
@@ -249,3 +238,4 @@ html {
     margin-left: -1px;
   }
 }
+
