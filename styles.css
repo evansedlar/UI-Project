@@ -1,0 +1,134 @@
+.card {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    border-bottom: none;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+/* Dark mode */
+:root {
+    --bg-color: #1f1f1f;
+    --text-color: #fff;
+    --header-bg-color: #2e2e2e;
+    --header-text-color: #fff;
+}
+
+body.dark-mode {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.btn-outline-success.dark-mode {
+    color: #fff;
+    border-color: #fff;
+}
+
+.card.dark-mode {
+    background-color: #2e2e2e;
+    color: #fff;
+    border-color: #333;
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.15);
+}
+
+.card-header.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border-bottom: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
+}
+
+.btn-outline-success {
+    color: #fff;
+    border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.form-control {
+    width: 250px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ccc;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav .nav-item .btn-outline-success {
+    color: #fff;
+    border-color: #28a745;
+}
+
+.navbar-nav .nav-item .btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.form-control {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #444;
+}
+
+#titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
