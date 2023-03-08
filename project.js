@@ -8,6 +8,7 @@ const starshipsButton = document.getElementById("starshipsButton")
 const pageContents = document.getElementById('pageContents')
 const imageList = document.getElementById('movieImg')
 const loadingScreen = document.getElementById('loading-screen')
+const titleContainer = document.getElementById('titleContainer')
 //next buttons
 
 
@@ -30,12 +31,12 @@ function homePage() {
     window.location.href = "project.html";
 }
 
-const movie4 = document.getElementById('movie4')
-const movie5 = document.getElementById('movie5')
-const movie6 = document.getElementById('movie6')
 const movie1 = document.getElementById('movie1')
 const movie2 = document.getElementById('movie2')
 const movie3 = document.getElementById('movie3')
+const movie4 = document.getElementById('movie4')
+const movie5 = document.getElementById('movie5')
+const movie6 = document.getElementById('movie6')
 
 
 movie4.onclick = function() {
@@ -140,24 +141,28 @@ planetsButton.addEventListener('click', displayPlanets)
 function displayPlanets() {
     movieImg.innerHTML = ""
     pageContents.innerHTML = ""
+    titleContainer.innerHTML = ""
     loadingScreen.style.display = "block"
     fetch("https://swapi.dev/api/planets/")
         .then(response => response.json())
         .then(planetsArr => {
+            const planetTitle = `<h1>Planets</h1>`
             const nextPlanets2 = `<button onclick="planetsPage2()">Next Page</button>`
             const planets = planetsArr.results
             const planetsList = planets.map(function(planet) {
                 return `
-            <ul>
-                <h1>${planet.name}</h1>
-                <li>Climate: ${planet.climate}</li>
-                <li>Terrain: ${planet.terrain}</li>
-                <li>Population: ${planet.population}</li>
-            </ul>
+            <div class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1>${planet.name}</h1>
+                    <li>Climate: ${planet.climate}</li>
+                    <li>Terrain: ${planet.terrain}</li>
+                    <li>Population: ${planet.population}</li>
+                </div>
+            </div>
             `
-
             })
-            pageContents.innerHTML = planetsList.join("") 
+            pageContents.innerHTML = planetsList.join("")
+            titleContainer.innerHTML = planetTitle 
             buttonContainer.innerHTML = nextPlanets2
             loadingScreen.style.display = "none"
         })
@@ -180,12 +185,14 @@ function planetsPage2() {
         const planets = planetsArr.results
         const planetsList = planets.map(function (planet) {
             return `
-        <ul>
-            <h1>${planet.name}</h1>
-            <li>Climate: ${planet.climate}</li>
-            <li>Terrain: ${planet.terrain}</li>
-            <li>Population: ${planet.population}</li>
-        </ul>
+            <div class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${planet.name}</h1>
+                    <li>Climate: ${planet.climate}</li>
+                    <li>Terrain: ${planet.terrain}</li>
+                    <li>Population: ${planet.population}</li>
+                </div>
+            </div>
             `
         })
         pageContents.innerHTML = planetsList.join("")
@@ -206,12 +213,14 @@ function planetsPage3() {
         const planets = planetsArr.results
         const planetsList = planets.map(function (planet) {
             return `
-        <ul>
-            <h1>${planet.name}</h1>
-            <li>Climate: ${planet.climate}</li>
-            <li>Terrain: ${planet.terrain}</li>
-            <li>Population: ${planet.population}</li>
-        </ul>
+            <div class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${planet.name}</h1>
+                    <li>Climate: ${planet.climate}</li>
+                    <li>Terrain: ${planet.terrain}</li>
+                    <li>Population: ${planet.population}</li>
+                </div>
+            </div>
             `
         })
         pageContents.innerHTML = planetsList.join("")
@@ -232,12 +241,14 @@ function planetsPage4() {
         const planets = planetsArr.results
         const planetsList = planets.map(function (planet) {
             return `
-        <ul>
-            <h1>${planet.name}</h1>
-            <li>Climate: ${planet.climate}</li>
-            <li>Terrain: ${planet.terrain}</li>
-            <li>Population: ${planet.population}</li>
-        </ul>
+            <div class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${planet.name}</h1>
+                    <li>Climate: ${planet.climate}</li>
+                    <li>Terrain: ${planet.terrain}</li>
+                    <li>Population: ${planet.population}</li>
+                </div>
+            </div>
             `
         })
         pageContents.innerHTML = planetsList.join("")
@@ -258,12 +269,14 @@ function planetsPage5() {
         const planets = planetsArr.results
         const planetsList = planets.map(function (planet) {
             return `
-        <ul>
-            <h1>${planet.name}</h1>
-            <li>Climate: ${planet.climate}</li>
-            <li>Terrain: ${planet.terrain}</li>
-            <li>Population: ${planet.population}</li>
-        </ul>
+            <div class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${planet.name}</h1>
+                    <li>Climate: ${planet.climate}</li>
+                    <li>Terrain: ${planet.terrain}</li>
+                    <li>Population: ${planet.population}</li>
+                </div>
+            </div>
             `
         })
         pageContents.innerHTML = planetsList.join("")
@@ -283,12 +296,14 @@ function planetsPage6() {
         const planets = planetsArr.results
         const planetsList = planets.map(function (planet) {
             return `
-        <ul>
-            <h1>${planet.name}</h1>
-            <li>Climate: ${planet.climate}</li>
-            <li>Terrain: ${planet.terrain}</li>
-            <li>Population: ${planet.population}</li>
-        </ul>
+            <div class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${planet.name}</h1>
+                    <li>Climate: ${planet.climate}</li>
+                    <li>Terrain: ${planet.terrain}</li>
+                    <li>Population: ${planet.population}</li>
+                </div>
+            </div>
             `
         })
         pageContents.innerHTML = planetsList.join("")
@@ -305,24 +320,32 @@ speciesButton.addEventListener('click', displaySpecies)
 function displaySpecies() {
     movieImg.innerHTML = ""
     pageContents.innerHTML = ""
+    titleContainer.innerHTML = ""
     loadingScreen.style.display = "block"
     fetch("https://swapi.dev/api/species")
         .then(response => response.json())
         .then(speciesArr => {
+            const speciesTitle = `<h1>Species</h1>`
             const nextSpecies2 = `<button onclick="speciesPage2()">Next Page</button>`
             const species = speciesArr.results
             const speciesList = species.map(function (specie) {
                 return `
-            <ul id="planetInfo">
-                <h1>${specie.name}</h1>
-                <li>Homeworld: ${specie.homeworld}</li>
-                <li>Language: ${specie.language}</li>
-                <a href="${specie.people}">Characters of this species</a>
-            </ul>
+            <div class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${specie.name}</h1>
+                    <li>Language: ${specie.language}</li>
+                    <li>Designation: ${specie.designation}</li>
+                    <li>Classification: ${specie.classification}</li>
+                    <li>Hair Colors: ${specie.hair_colors}</li>
+                    <li>Eye Colors: ${specie.eye_colors}</li>
+                    <li>Average Lifespan: ${specie.average_lifespan}</li>
+                </div>
+            </div>
             `
             })
             pageContents.innerHTML = speciesList.join("")
             buttonContainer.innerHTML = nextSpecies2
+            titleContainer.innerHTML = speciesTitle
             loadingScreen.style.display = "none"
         })
         .catch(error => {
@@ -343,12 +366,17 @@ function speciesPage2() {
         const species = speciesArr.results
         const speciesList = species.map(function (specie) {
             return `
-            <ul id="planetInfo">
-            <h1>${specie.name}</h1>
-            <li>Homeworld: ${specie.homeworld}</li>
-            <li>Language: ${specie.language}</li>
-            <a href="${specie.people}">Characters of this species</a>
-        </ul>
+            <div class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${specie.name}</h1>
+                    <li>Language: ${specie.language}</li>
+                    <li>Designation: ${specie.designation}</li>
+                    <li>Classification: ${specie.classification}</li>
+                    <li>Hair Colors: ${specie.hair_colors}</li>
+                    <li>Eye Colors: ${specie.eye_colors}</li>
+                    <li>Average Lifespan: ${specie.average_lifespan}</li>
+                </div>
+            </div>
             `
         })
         pageContents.innerHTML = speciesList.join("")
@@ -369,12 +397,17 @@ function speciesPage3() {
         const species = speciesArr.results
         const speciesList = species.map(function (specie) {
             return `
-            <ul id="planetInfo">
-            <h1>${specie.name}</h1>
-            <li>Homeworld: ${specie.homeworld}</li>
-            <li>Language: ${specie.language}</li>
-            <a href="${specie.people}">Characters of this species</a>
-        </ul>
+            <div class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${specie.name}</h1>
+                    <li>Language: ${specie.language}</li>
+                    <li>Designation: ${specie.designation}</li>
+                    <li>Classification: ${specie.classification}</li>
+                    <li>Hair Colors: ${specie.hair_colors}</li>
+                    <li>Eye Colors: ${specie.eye_colors}</li>
+                    <li>Average Lifespan: ${specie.average_lifespan}</li>
+                </div>
+            </div>
             `
         })
         pageContents.innerHTML = speciesList.join("")
@@ -394,12 +427,17 @@ function speciesPage4() {
         const species = speciesArr.results
         const speciesList = species.map(function (specie) {
             return `
-            <ul id="planetInfo">
-            <h1>${specie.name}</h1>
-            <li>Homeworld: ${specie.homeworld}</li>
-            <li>Language: ${specie.language}</li>
-            <a href="${specie.people}">Characters of this species</a>
-        </ul>
+            <div class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${specie.name}</h1>
+                    <li>Language: ${specie.language}</li>
+                    <li>Designation: ${specie.designation}</li>
+                    <li>Classification: ${specie.classification}</li>
+                    <li>Hair Colors: ${specie.hair_colors}</li>
+                    <li>Eye Colors: ${specie.eye_colors}</li>
+                    <li>Average Lifespan: ${specie.average_lifespan}</li>
+                </div>
+            </div>
             `
         })
         pageContents.innerHTML = speciesList.join("")
@@ -414,26 +452,31 @@ charactersButton.addEventListener('click', displayCharacters)
 function displayCharacters() {
     movieImg.innerHTML = ""
     pageContents.innerHTML = ""
+    titleContainer.innerHTML = ""
     loadingScreen.style.display = "block"
     fetch("https://swapi.dev/api/people/")
         .then(response => response.json())
         .then(charactersArr => {
+            const charactersTitle = `<h1>Characters</h1>`
             const nextCharacters2 = `<button onclick="charactersPage2()">Next Page</button>`
             const characters = charactersArr.results
             const charactersList = characters.map(function (character) {
                 return `
-            <ul id="planetInfo">
-                <h1>${character.name}</h1>
-                <li>Height: ${character.height}cm</li>
-                <li>Hair Color: ${character.hair_color}</li>
-                <li>Eye Color: ${character.eye_color}</li>
-                <li>Birth Year: ${character.birth_year}</li>
-                <li>Gender: ${character.gender}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${character.name}</h1>
+                    <li>Height: ${character.height}cm</li>
+                    <li>Hair Color: ${character.hair_color}</li>
+                    <li>Eye Color: ${character.eye_color}</li>
+                    <li>Birth Year: ${character.birth_year}</li>
+                    <li>Gender: ${character.gender}</li>
+                </div>
             </ul>
             `
             })
             pageContents.innerHTML = charactersList.join("")
             buttonContainer.innerHTML = nextCharacters2
+            titleContainer.innerHTML = charactersTitle
             loadingScreen.style.display = "none"
         })
         .catch(error => {
@@ -454,13 +497,15 @@ function charactersPage2() {
         const characters = charactersArr.results
         const charactersList = characters.map(function (character) {
             return `
-            <ul id="planetInfo">
-                <h1>${character.name}</h1>
-                <li>Height: ${character.height}cm</li>
-                <li>Hair Color: ${character.hair_color}</li>
-                <li>Eye Color: ${character.eye_color}</li>
-                <li>Birth Year: ${character.birth_year}</li>
-                <li>Gender: ${character.gender}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${character.name}</h1>
+                    <li>Height: ${character.height}cm</li>
+                    <li>Hair Color: ${character.hair_color}</li>
+                    <li>Eye Color: ${character.eye_color}</li>
+                    <li>Birth Year: ${character.birth_year}</li>
+                    <li>Gender: ${character.gender}</li>
+                </div>
             </ul>
             `  
         })
@@ -482,13 +527,15 @@ function charactersPage3() {
         const characters = charactersArr.results
         const charactersList = characters.map(function (character) {
             return `
-            <ul id="planetInfo">
-                <h1>${character.name}</h1>
-                <li>Height: ${character.height}cm</li>
-                <li>Hair Color: ${character.hair_color}</li>
-                <li>Eye Color: ${character.eye_color}</li>
-                <li>Birth Year: ${character.birth_year}</li>
-                <li>Gender: ${character.gender}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${character.name}</h1>
+                    <li>Height: ${character.height}cm</li>
+                    <li>Hair Color: ${character.hair_color}</li>
+                    <li>Eye Color: ${character.eye_color}</li>
+                    <li>Birth Year: ${character.birth_year}</li>
+                    <li>Gender: ${character.gender}</li>
+                </div>
             </ul>
             `  
         })
@@ -510,13 +557,15 @@ function charactersPage4() {
         const characters = charactersArr.results
         const charactersList = characters.map(function (character) {
             return `
-            <ul id="planetInfo">
-                <h1>${character.name}</h1>
-                <li>Height: ${character.height}cm</li>
-                <li>Hair Color: ${character.hair_color}</li>
-                <li>Eye Color: ${character.eye_color}</li>
-                <li>Birth Year: ${character.birth_year}</li>
-                <li>Gender: ${character.gender}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${character.name}</h1>
+                    <li>Height: ${character.height}cm</li>
+                    <li>Hair Color: ${character.hair_color}</li>
+                    <li>Eye Color: ${character.eye_color}</li>
+                    <li>Birth Year: ${character.birth_year}</li>
+                    <li>Gender: ${character.gender}</li>
+                </div>
             </ul>
             `  
         })
@@ -538,13 +587,15 @@ function charactersPage5() {
         const characters = charactersArr.results
         const charactersList = characters.map(function (character) {
             return `
-            <ul id="planetInfo">
-                <h1>${character.name}</h1>
-                <li>Height: ${character.height}cm</li>
-                <li>Hair Color: ${character.hair_color}</li>
-                <li>Eye Color: ${character.eye_color}</li>
-                <li>Birth Year: ${character.birth_year}</li>
-                <li>Gender: ${character.gender}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${character.name}</h1>
+                    <li>Height: ${character.height}cm</li>
+                    <li>Hair Color: ${character.hair_color}</li>
+                    <li>Eye Color: ${character.eye_color}</li>
+                    <li>Birth Year: ${character.birth_year}</li>
+                    <li>Gender: ${character.gender}</li>
+                </div>
             </ul>
             `  
         })
@@ -566,13 +617,15 @@ function charactersPage6() {
         const characters = charactersArr.results
         const charactersList = characters.map(function (character) {
             return `
-            <ul id="planetInfo">
-                <h1>${character.name}</h1>
-                <li>Height: ${character.height}cm</li>
-                <li>Hair Color: ${character.hair_color}</li>
-                <li>Eye Color: ${character.eye_color}</li>
-                <li>Birth Year: ${character.birth_year}</li>
-                <li>Gender: ${character.gender}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${character.name}</h1>
+                    <li>Height: ${character.height}cm</li>
+                    <li>Hair Color: ${character.hair_color}</li>
+                    <li>Eye Color: ${character.eye_color}</li>
+                    <li>Birth Year: ${character.birth_year}</li>
+                    <li>Gender: ${character.gender}</li>
+                </div>
             </ul>
             `  
         })
@@ -594,13 +647,15 @@ function charactersPage7() {
         const characters = charactersArr.results
         const charactersList = characters.map(function (character) {
             return `
-            <ul id="planetInfo">
-                <h1>${character.name}</h1>
-                <li>Height: ${character.height}cm</li>
-                <li>Hair Color: ${character.hair_color}</li>
-                <li>Eye Color: ${character.eye_color}</li>
-                <li>Birth Year: ${character.birth_year}</li>
-                <li>Gender: ${character.gender}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${character.name}</h1>
+                    <li>Height: ${character.height}cm</li>
+                    <li>Hair Color: ${character.hair_color}</li>
+                    <li>Eye Color: ${character.eye_color}</li>
+                    <li>Birth Year: ${character.birth_year}</li>
+                    <li>Gender: ${character.gender}</li>
+                </div>
             </ul>
             `  
         })
@@ -622,13 +677,15 @@ function charactersPage8() {
         const characters = charactersArr.results
         const charactersList = characters.map(function (character) {
             return `
-            <ul id="planetInfo">
-                <h1>${character.name}</h1>
-                <li>Height: ${character.height}cm</li>
-                <li>Hair Color: ${character.hair_color}</li>
-                <li>Eye Color: ${character.eye_color}</li>
-                <li>Birth Year: ${character.birth_year}</li>
-                <li>Gender: ${character.gender}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${character.name}</h1>
+                    <li>Height: ${character.height}cm</li>
+                    <li>Hair Color: ${character.hair_color}</li>
+                    <li>Eye Color: ${character.eye_color}</li>
+                    <li>Birth Year: ${character.birth_year}</li>
+                    <li>Gender: ${character.gender}</li>
+                </div>
             </ul>
             `  
         })
@@ -649,13 +706,15 @@ function charactersPage9() {
         const characters = charactersArr.results
         const charactersList = characters.map(function (character) {
             return `
-            <ul id="planetInfo">
-                <h1>${character.name}</h1>
-                <li>Height: ${character.height}cm</li>
-                <li>Hair Color: ${character.hair_color}</li>
-                <li>Eye Color: ${character.eye_color}</li>
-                <li>Birth Year: ${character.birth_year}</li>
-                <li>Gender: ${character.gender}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${character.name}</h1>
+                    <li>Height: ${character.height}cm</li>
+                    <li>Hair Color: ${character.hair_color}</li>
+                    <li>Eye Color: ${character.eye_color}</li>
+                    <li>Birth Year: ${character.birth_year}</li>
+                    <li>Gender: ${character.gender}</li>
+                </div>
             </ul>
             `  
         })
@@ -672,26 +731,31 @@ vehiclesButton.addEventListener('click', displayVehicles)
 function displayVehicles() {
     movieImg.innerHTML = ""
     pageContents.innerHTML = ""
+    titleContainer.innerHTML = ""
     loadingScreen.style.display = "block"
     fetch("https://swapi.dev/api/vehicles/")
         .then(response => response.json())
         .then(vehiclesArr => {
+            const vehiclesTitle = `<h1>Vehicles</h1>`
             const nextVehicles2 = `<button onclick="vehiclesPage2()">Next Page</button>`
             const vehicles = vehiclesArr.results
             const vehiclesList = vehicles.map(function (vehicle) {
                 return `
-            <ul id="planetInfo">
-                <h1>${vehicle.name}</h1>
-                <li>Model: ${vehicle.model}</li>
-                <li>Manufacturer: ${vehicle.manufacturer}</li>
-                <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
-                <li>Vehicle Class: ${vehicle.vehicle_class}</li>
-                <li>Crew Size: ${vehicle.crew}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${vehicle.name}</h1>
+                    <li>Model: ${vehicle.model}</li>
+                    <li>Manufacturer: ${vehicle.manufacturer}</li>
+                    <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
+                    <li>Vehicle Class: ${vehicle.vehicle_class}</li>
+                    <li>Crew Size: ${vehicle.crew}</li>
+                </div>
             </ul>
             `
             })
             pageContents.innerHTML = vehiclesList.join("")
             buttonContainer.innerHTML = nextVehicles2
+            titleContainer.innerHTML = vehiclesTitle
             loadingScreen.style.display = "none"
         })
         .catch(error => {
@@ -712,13 +776,15 @@ function vehiclesPage2() {
         const vehicles = vehiclesArr.results
         const vehiclesList = vehicles.map(function (vehicle) {
             return `
-            <ul id="planetInfo">
-                <h1>${vehicle.name}</h1>
-                <li>Model: ${vehicle.model}</li>
-                <li>Manufacturer: ${vehicle.manufacturer}</li>
-                <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
-                <li>Vehicle Class: ${vehicle.vehicle_class}</li>
-                <li>Crew Size: ${vehicle.crew}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${vehicle.name}</h1>
+                    <li>Model: ${vehicle.model}</li>
+                    <li>Manufacturer: ${vehicle.manufacturer}</li>
+                    <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
+                    <li>Vehicle Class: ${vehicle.vehicle_class}</li>
+                    <li>Crew Size: ${vehicle.crew}</li>
+                </div>
             </ul>
             ` 
         })
@@ -741,13 +807,15 @@ function vehiclesPage3() {
         const vehicles = vehiclesArr.results
         const vehiclesList = vehicles.map(function (vehicle) {
             return `
-            <ul id="planetInfo">
-                <h1>${vehicle.name}</h1>
-                <li>Model: ${vehicle.model}</li>
-                <li>Manufacturer: ${vehicle.manufacturer}</li>
-                <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
-                <li>Vehicle Class: ${vehicle.vehicle_class}</li>
-                <li>Crew Size: ${vehicle.crew}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${vehicle.name}</h1>
+                    <li>Model: ${vehicle.model}</li>
+                    <li>Manufacturer: ${vehicle.manufacturer}</li>
+                    <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
+                    <li>Vehicle Class: ${vehicle.vehicle_class}</li>
+                    <li>Crew Size: ${vehicle.crew}</li>
+                </div>
             </ul>
             ` 
         })
@@ -768,13 +836,15 @@ function vehiclesPage4() {
         const vehicles = vehiclesArr.results
         const vehiclesList = vehicles.map(function (vehicle) {
             return `
-            <ul id="planetInfo">
-                <h1>${vehicle.name}</h1>
-                <li>Model: ${vehicle.model}</li>
-                <li>Manufacturer: ${vehicle.manufacturer}</li>
-                <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
-                <li>Vehicle Class: ${vehicle.vehicle_class}</li>
-                <li>Crew Size: ${vehicle.crew}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1 class="card-title">${vehicle.name}</h1>
+                    <li>Model: ${vehicle.model}</li>
+                    <li>Manufacturer: ${vehicle.manufacturer}</li>
+                    <li>Cost in Credits: ${vehicle.cost_in_credits}</li>
+                    <li>Vehicle Class: ${vehicle.vehicle_class}</li>
+                    <li>Crew Size: ${vehicle.crew}</li>
+                </div>
             </ul>
             ` 
         })
@@ -791,25 +861,30 @@ starshipsButton.addEventListener('click', displayStarships)
 function displayStarships() {
     movieImg.innerHTML = ""
     pageContents.innerHTML = ""
+    titleContainer.innerHTML = ""
     loadingScreen.style.display = "block"
     fetch("https://swapi.dev/api/starships/")
         .then(response => response.json())
         .then(starshipsArr => {
+            const starshipsTitle = `<h1>Starships</h1>`
             const nextStarships2 = `<button onclick="starshipsPage2()">Next Page</button>`
             const starships = starshipsArr.results
             const starshipsList = starships.map(function (starship) {
                 return `
-            <ul id="planetInfo">
-                <h1>${starship.name}</h1>
-                <li>Model: ${starship.model}</li>
-                <li>Manufacturer: ${starship.manufacturer}</li>
-                <li>Cost in Credits: ${starship.cost_in_credits}</li>
-                <li>Vehicle Class: ${starship.starship_class}</li>
-                <li>Crew Size: ${starship.crew}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1>${starship.name}</h1>
+                    <li>Model: ${starship.model}</li>
+                    <li>Manufacturer: ${starship.manufacturer}</li>
+                    <li>Cost in Credits: ${starship.cost_in_credits}</li>
+                    <li>Vehicle Class: ${starship.starship_class}</li>
+                    <li>Crew Size: ${starship.crew}</li>
+                </div>
             </ul>
             `
             })
             pageContents.innerHTML = starshipsList.join("")
+            titleContainer.innerHTML = starshipsTitle
             buttonContainer.innerHTML = nextStarships2
             loadingScreen.style.display = "none"
         })
@@ -831,13 +906,15 @@ function starshipsPage2() {
         const starships = starshipsArr.results
         const starshipsList = starships.map(function (starship) {
             return `
-            <ul id="planetInfo">
-                <h1>${starship.name}</h1>
-                <li>Model: ${starship.model}</li>
-                <li>Manufacturer: ${starship.manufacturer}</li>
-                <li>Cost in Credits: ${starship.cost_in_credits}</li>
-                <li>Vehicle Class: ${starship.starship_class}</li>
-                <li>Crew Size: ${starship.crew}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1>${starship.name}</h1>
+                    <li>Model: ${starship.model}</li>
+                    <li>Manufacturer: ${starship.manufacturer}</li>
+                    <li>Cost in Credits: ${starship.cost_in_credits}</li>
+                    <li>Vehicle Class: ${starship.starship_class}</li>
+                    <li>Crew Size: ${starship.crew}</li>
+                </div>
             </ul>
             `
         })
@@ -859,13 +936,15 @@ function starshipsPage3() {
         const starships = starshipsArr.results
         const starshipsList = starships.map(function (starship) {
             return `
-            <ul id="planetInfo">
-                <h1>${starship.name}</h1>
-                <li>Model: ${starship.model}</li>
-                <li>Manufacturer: ${starship.manufacturer}</li>
-                <li>Cost in Credits: ${starship.cost_in_credits}</li>
-                <li>Vehicle Class: ${starship.starship_class}</li>
-                <li>Crew Size: ${starship.crew}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1>${starship.name}</h1>
+                    <li>Model: ${starship.model}</li>
+                    <li>Manufacturer: ${starship.manufacturer}</li>
+                    <li>Cost in Credits: ${starship.cost_in_credits}</li>
+                    <li>Vehicle Class: ${starship.starship_class}</li>
+                    <li>Crew Size: ${starship.crew}</li>
+                </div>
             </ul>
             `
         })
@@ -887,13 +966,15 @@ function starshipsPage4() {
         const starships = starshipsArr.results
         const starshipsList = starships.map(function (starship) {
             return `
-            <ul id="planetInfo">
-                <h1>${starship.name}</h1>
-                <li>Model: ${starship.model}</li>
-                <li>Manufacturer: ${starship.manufacturer}</li>
-                <li>Cost in Credits: ${starship.cost_in_credits}</li>
-                <li>Vehicle Class: ${starship.starship_class}</li>
-                <li>Crew Size: ${starship.crew}</li>
+            <ul class="card", "bg-card-secondary", "text-white", "mb-3", "ms-3", "me-3", "w-25">
+                <div class="card-body">
+                    <h1>${starship.name}</h1>
+                    <li>Model: ${starship.model}</li>
+                    <li>Manufacturer: ${starship.manufacturer}</li>
+                    <li>Cost in Credits: ${starship.cost_in_credits}</li>
+                    <li>Vehicle Class: ${starship.starship_class}</li>
+                    <li>Crew Size: ${starship.crew}</li>
+                </div>
             </ul>
             `
         })
