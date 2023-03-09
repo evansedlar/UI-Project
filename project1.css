@@ -1,0 +1,32 @@
+#moviePoster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
+  overflow: hidden;
+  max-width: 200;
+  /* border: 3px solid rgb(59, 172, 210); */
+  padding: 5%;
+}
+#moviePoster img {
+  max-width: 32%;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+  /* margin-top: 3rem; */
+  object-fit: cover;
+}
+#moviePoster img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#showMoreContainer {
+  text-align: center;
+}
+#showMore {
+  padding-left: 20%;
+  padding-right: 20%;
+  border-radius: 10px;
+  border: 3px solid orangered;
+  background-color: black;
+}

@@ -9,13 +9,11 @@ const pageContents = document.getElementById('pageContents')
 const imageList = document.getElementById('movieImg')
 const loadingScreen = document.getElementById('loading-screen')
 const titleContainer = document.getElementById('titleContainer')
+const buttonContainer = document.getElementById('buttonContainer')
 //next buttons
 
 
-
-const next = document.getElementById('next')
-const prev = document.getElementById('prev')
-const images = Array.from(imageList.getElementsByTagName('img'))
+// const images = Array.from(imageList.getElementsByTagName('img'))
 let currentImageIndex = 0
 const numImgToShow = 3
 
@@ -995,16 +993,11 @@ function starshipsPage4() {
     })
 }
 
+const showMore = document.getElementById("showMore");
+const images = document.getElementsByTagName('img')
 
-for (let i = 0; i < images.length; i++) {
-    if (i >= numImgToShow) {
-        images[i].style.display = 'none'
-    }
-}
-
-
-
-function showImages() {
+  
+  function showImages() {
     for(let i = 0; i < images.length; i++) {
         if (i >= numImgToShow) { 
             images[i].style.display = 'none'
@@ -1024,8 +1017,12 @@ function showImages() {
         images[i].style.display = 'none';
     }
     currentImageIndex += numImgToShow;
+    
 }
 
 showImages()
-next.addEventListener('click', showImages)
-prev.addEventListener('click', showImages)
+showMore.addEventListener('click', showImages)
+
+
+  
+  
