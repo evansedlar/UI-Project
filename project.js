@@ -39,22 +39,70 @@ const movie5 = document.getElementById('movie5')
 const movie6 = document.getElementById('movie6')
 
 
-movie4.onclick = function() {
+movie4.onclick = function () {
     movieImg.innerHTML = ""
     fetch("https://swapi.dev/api/films/1/")
-    .then(response => response.json())
-    .then(movieArr => {
-        const homeButton = `<button onclick="homePage()">Back</button>`
-        const movieInfo = document.createElement('div')
-        movieInfo.innerHTML = `
+        .then(response => response.json())
+        .then(movieArr => {
+            const homeButton = `<button onclick="homePage()">Back</button>`
+            const movieInfo = document.createElement('div')
+            movieInfo.innerHTML = `
             <h1>EPISODE ${movieArr.episode_id}: ${movieArr.title}</h1>
             <p>Director: ${movieArr.director}</p>
             <p>Release Date: ${movieArr.release_date}</p>
             <p>Opening Crawl: ${movieArr.opening_crawl}</p>
+            <div class="card mb-3">
+            <img src="https://www.themoviedb.org/t/p/original/iPnH51khswDrYij6XIBHKlAznW.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Plot</h5>
+                    <p class="card-text">Part IV in George Lucas' epic, this movie opens with a rebel ship being boarded by the tyrannical Darth Vader. The plot then follows the life of a simple farm boy, Luke Skywalker, as he and his newly met allies (Han Solo, Chewbacca, Obi-wan Kenobi, C-3PO, R2-D2) attempt to rescue a rebel leader, Princess Leia, from the clutches of the Empire. The conclusion is culminated as the rebels, including Skywalker and flying ace Wedge Antilles make an attack on the Empire's most powerful and ominous weapon, the Death Star.</p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-851725728-1556902127.jpg?crop=1xw:1xh;center,top&resize=980:*" class="card-img-top" alt=>
+      <div class="card-body">
+        <h5 class="card-title">Notable Cast</h5>
+        <p class="card-text">Harrison Ford: Han Solo, Mark Hamill: Luke Skywalker, Carrie Fisher: Princess Leia, Anthony Daniels: C-3PO, Peter Mayhew: Chewbacca, and Kenny Baker: R2-D2</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://preview.redd.it/3cwanjjg8n801.jpg?auto=webp&s=986b8b13bcbd23af0045e446ab21685e66c4fb82" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Trivia</h5>
+        <p class="card-text">George Lucas was so sure this movie would flop that instead of attending the premiere, he went on vacation to Hawaii with his good friend Steven Spielberg, where they came up with the idea for Indiana Jones and the Raiders of the Lost Ark (1981).</p>
+        <p class="card-text">In early drafts of the script, R2-D2 could speak standard English, and he had a rather foul vocabulary. Although all of R2's English speech was removed, many of C-3PO's reactions to it were left in.</p>
+        <p class="card-text">To make the lightsaber sound, Ben Burtt mixed the humming of an old 35mm projector at the university where he worked with the sound of interference from a television set. The sound of the lightsabers clashing was a mix of carbon arc noises and the pressing of metal against dry ice.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+</div>
         `
-    pageContents.appendChild(movieInfo)
-    buttonContainer.innerHTML = homeButton
-    })
+            pageContents.appendChild(movieInfo)
+            buttonContainer.innerHTML = homeButton
+        })
 }
 
 movie5.onclick = function() {

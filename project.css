@@ -4,7 +4,7 @@
   /* add margin to move the loading screen below the navbar */
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #444;
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -42,6 +42,7 @@
   bottom: 0;
   animation-name: fade;
   animation-duration: 1.5s;
+  padding-right: 50px;
 }
 
 #movie4,
@@ -248,4 +249,59 @@
   }
 }
 
+/* MEDIA QUERIES FOR THE NAV BAR--------------------------- */
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .nav-item {
+    margin-bottom: 10px;
+  }
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+  }
+
+
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-right: 20px;
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+/* #pageContents img{
+  width: 50%;
+} */
