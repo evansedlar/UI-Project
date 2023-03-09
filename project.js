@@ -9,8 +9,13 @@ const pageContents = document.getElementById('pageContents')
 const imageList = document.getElementById('movieImg')
 const loadingScreen = document.getElementById('loading-screen')
 const titleContainer = document.getElementById('titleContainer')
+const buttonContainer = document.getElementById('buttonContainer')
 //next buttons
 
+
+// const images = Array.from(imageList.getElementsByTagName('img'))
+let currentImageIndex = 0
+const numImgToShow = 3
 
 loadingScreen.style.display = "none"
 
@@ -1036,9 +1041,10 @@ function starshipsPage4() {
     })
 }
 
-
 const showMore = document.getElementById("showMore");
 const images = document.getElementsByTagName('img')
+
+
 
   
   function showImages() {
@@ -1066,3 +1072,7 @@ const images = document.getElementsByTagName('img')
 
 showImages()
 showMore.addEventListener('click', showImages)
+
+
+  
+  
