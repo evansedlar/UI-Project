@@ -71,8 +71,6 @@
   }
 }
 
-
-
 .hamburger {
   background-color: transparent;
   border: 0;
@@ -93,12 +91,14 @@
   max-width: 200;
   padding: 5%;
 }
+
 #moviePoster img {
   max-width: 32%;
   height: auto;
   transition: all 0.5s ease-in-out;
   object-fit: cover;
 }
+
 #moviePoster img:hover {
   transform: scale(1.2);
   cursor: pointer;
@@ -107,6 +107,7 @@
 #showMoreContainer {
   text-align: center;
 }
+
 #showMore {
   padding-left: 20%;
   padding-right: 20%;
