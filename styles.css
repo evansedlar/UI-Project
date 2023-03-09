@@ -4,6 +4,7 @@
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     margin-bottom: 1rem;
+    padding-right: 50px;
 }
 
 .card-header {
@@ -128,6 +129,12 @@ button:focus {
 }
 
 #titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pageTitle {
     display: flex;
     align-items: center;
     justify-content: center;
