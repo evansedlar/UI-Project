@@ -27,14 +27,14 @@
 }
 
 /* MOVIE PAGES & MOVIE IMAGES --------------------------------------*/
-#movie {
+/* #movie {
   position: relative;
-  /* margin: auto; */
+  margin: auto;
   justify-content: center;
   width: 100vw;
-}
+} */
 
-#movieImg {
+/* #movieImg {
   transform: translateX(3rem);
   margin: auto;
   top: 0;
@@ -63,11 +63,11 @@
 #movieImg img {
   max-width: 30%;
   justify-content: center;
-}
+} */
 
 /* SLIDESHOW KEYS ------------------------------------------------------ */
 
-@keyframes fade {
+/* @keyframes fade {
   from {
     opacity: .4
   }
@@ -108,7 +108,7 @@
 #prev:hover,
 #next:hover {
   background-color: rgba(0, 0, 0, 0.8);
-}
+} */
 
 /* MEDIA QUERY LOADING SYMBOL------------------------------------------- */
 #loading-screen {
@@ -140,10 +140,10 @@
 }
 
 /* MOVIE DISPLAY AND IMAGES--------------------------------------------- */
-#movie {
+/* #movie {
   position: absolute;
-  /* margin: auto; */
-  /* justify-content: center; */
+  margin: auto; 
+  justify-content: center;
   width: 100vw;
 }
 
@@ -154,10 +154,10 @@
 #movie2,
 #movie3 {
   border-radius: 10px 10px 10px 10px;
-}
+} */
 
 /* SLIDESHOW KEYS------------------------------------------------------ */
-#prev,
+/* #prev,
 #next {
   cursor: pointer;
   position: absolute;
@@ -188,19 +188,19 @@
   top: 50%;
   transform: translateY(-50%);
   margin-left: 1px;
-}
+} */
 
-#prev:hover,
+/* #prev:hover,
 #next:hover {
   background-color: rgba(0, 0, 0, 0.8);
-}
+} */
 
 /* Default styles for larger screens */
-#movieImg {
+/* #movieImg {
   display: flex;
   justify-content: right;
   align-items: center;
-  /* position: relative; */
+  position: relative; 
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -208,10 +208,10 @@
 #movieImg img {
   max-width: 32%;
   justify-content: center;
-}
+} */
 
 /* MEDIA QUERY FOR SMALLER SCREENS-------------------------- */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   #movieImg {
     flex-wrap: wrap;
     justify-content: center;
@@ -234,10 +234,10 @@
     position: relative;
     margin: 10px;
   }
-}
+} */
 
 /* MEDIA QUERY FOR BIGGER SCREENS-------------------------- */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   #next {
     right: auto;
     margin-right: 1px;
@@ -247,7 +247,7 @@
     left: 0;
     margin-left: -1px;
   }
-}
+} */
 
 /* MEDIA QUERIES FOR THE NAV BAR--------------------------- */
 @media only screen and (max-width: 767px) {
@@ -302,6 +302,35 @@
   outline: none;
 }
 
-/* #pageContents img{
-  width: 50%;
-} */
+#moviePoster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
+  overflow: hidden;
+  max-width: 200;
+  /* border: 3px solid rgb(59, 172, 210); */
+  padding: 5%;
+}
+#moviePoster img {
+  max-width: 32%;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+  /* margin-top: 3rem; */
+  object-fit: cover;
+}
+#moviePoster img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#showMoreContainer {
+  text-align: center;
+}
+#showMore {
+  padding-left: 20%;
+  padding-right: 20%;
+  border-radius: 10px;
+  border: 3px solid orangered;
+  background-color: black;
+}
