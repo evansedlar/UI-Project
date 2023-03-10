@@ -1,10 +1,19 @@
+
+/* MOVIE PAGES & MOVIE IMAGES --------------------------------------*/
+#movie {
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  width: 100vw;
+}
+
+/* MEDIA QUERY LOADING SYMBOL------------------------------------------- */
 #loading-screen {
   position: relative;
   margin-top: 50px;
-  /* add margin to move the loading screen below the navbar */
   width: 100%;
   height: 100%;
-  background-color: #444;
+  background-color: #fff;
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -24,15 +33,6 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-
-/* MOVIE DISPLAY AND IMAGES--------------------------------------------- */
-#movie {
-  position: absolute;
-  margin: auto;
-  justify-content: center;
-  width: 100vw;
 }
 
 /* MEDIA QUERIES FOR THE NAV BAR--------------------------- */
@@ -71,12 +71,6 @@
   }
 }
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .hamburger {
   background-color: transparent;
   border: 0;
@@ -88,7 +82,6 @@
   outline: none;
 }
 
-
 #moviePoster {
   display: flex;
   flex-wrap: wrap;
@@ -98,12 +91,14 @@
   max-width: 200;
   padding: 5%;
 }
+
 #moviePoster img {
   max-width: 32%;
   height: auto;
   transition: all 0.5s ease-in-out;
   object-fit: cover;
 }
+
 #moviePoster img:hover {
   transform: scale(1.2);
   cursor: pointer;
@@ -112,6 +107,7 @@
 #showMoreContainer {
   text-align: center;
 }
+
 #showMore {
   padding-left: 20%;
   padding-right: 20%;

@@ -56,48 +56,35 @@ movie4.onclick = function () {
                     <p class="card-text">Part IV in George Lucas' epic, this movie opens with a rebel ship being boarded by the tyrannical Darth Vader. The plot then follows the life of a simple farm boy, Luke Skywalker, as he and his newly met allies (Han Solo, Chewbacca, Obi-wan Kenobi, C-3PO, R2-D2) attempt to rescue a rebel leader, Princess Leia, from the clutches of the Empire. The conclusion is culminated as the rebels, including Skywalker and flying ace Wedge Antilles make an attack on the Empire's most powerful and ominous weapon, the Death Star.</p>
                     <p class="card-text"><small class="text-muted"></small></p>
                 </div>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-851725728-1556902127.jpg?crop=1xw:1xh;center,top&resize=980:*" class="card-img-top" alt=>
-      <div class="card-body">
-        <h5 class="card-title">Notable Cast</h5>
-        <p class="card-text">Harrison Ford: Han Solo, Mark Hamill: Luke Skywalker, Carrie Fisher: Princess Leia, Anthony Daniels: C-3PO, Peter Mayhew: Chewbacca, and Kenny Baker: R2-D2</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="https://preview.redd.it/3cwanjjg8n801.jpg?auto=webp&s=986b8b13bcbd23af0045e446ab21685e66c4fb82" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Trivia</h5>
-        <p class="card-text">George Lucas was so sure this movie would flop that instead of attending the premiere, he went on vacation to Hawaii with his good friend Steven Spielberg, where they came up with the idea for Indiana Jones and the Raiders of the Lost Ark (1981).</p>
-        <p class="card-text">In early drafts of the script, R2-D2 could speak standard English, and he had a rather foul vocabulary. Although all of R2's English speech was removed, many of C-3PO's reactions to it were left in.</p>
-        <p class="card-text">To make the lightsaber sound, Ben Burtt mixed the humming of an old 35mm projector at the university where he worked with the sound of interference from a television set. The sound of the lightsabers clashing was a mix of carbon arc noises and the pressing of metal against dry ice.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-        `
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-851725728-1556902127.jpg?crop=1xw:1xh;center,top&resize=980:*" class="card-img-top" alt=>
+                    <div class="card-body">
+                        <h5 class="card-title">Notable Cast Members:</h5>
+                        <p class="card-text">Harrison Ford as Han Solo</p>
+                        <p class="card-text">Mark Hamill as Luke Skywalker</p>
+                        <p class="card-text">Carrie Fisher as Princess Leia</p>
+                        <p class="card-text">Anthony Daniels as C-3PO</p>
+                        <p class="card-text">Peter Mayhew: Chewbacca</p>
+                        <p class="card-text">Kenny Baker: R2-D2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                <div class="card">
+                <img src="https://preview.redd.it/3cwanjjg8n801.jpg?auto=webp&s=986b8b13bcbd23af0045e446ab21685e66c4fb82" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Trivia</h5>
+                    <p class="card-text">George Lucas was so sure this movie would flop that instead of attending the premiere, he went on vacation to Hawaii with his good friend Steven Spielberg, where they came up with the idea for Indiana Jones and the Raiders of the Lost Ark (1981).</p>
+                    <p class="card-text">In early drafts of the script, R2-D2 could speak standard English, and he had a rather foul vocabulary. Although all of R2's English speech was removed, many of C-3PO's reactions to it were left in.</p>
+                    <p class="card-text">To make the lightsaber sound, Ben Burtt mixed the humming of an old 35mm projector at the university where he worked with the sound of interference from a television set. The sound of the lightsabers clashing was a mix of carbon arc noises and the pressing of metal against dry ice.</p>
+                </div>
+                </div>
+                </div>
+                </div>
+            `
             pageContents.appendChild(movieInfo)
             buttonContainer.innerHTML = homeButton
         })
@@ -116,6 +103,34 @@ movie5.onclick = function() {
             <p>Director: ${movieArr.director}</p>
             <p>Release Date: ${movieArr.release_date}</p>
             <p>Opening Crawl: ${movieArr.opening_crawl}</p>
+            <div class="card mb-3">
+            <img src="https://www.themoviedb.org/t/p/original/xaA6c3haZ22eSA2ppsQe2YBroMT.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Plot</h5>
+                    <p class="card-text">The adventure continues in this "Star Wars" sequel. Luke Skywalker, Han Solo, Princess Leia and Chewbacca face attack by the Imperial forces and its AT-AT walkers on the ice planet Hoth. While Han and Leia escape in the Millennium Falcon, Luke travels to Dagobah in search of Yoda. Only with the Jedi master's help will Luke survive when the dark side of the Force beckons him into the ultimate duel with Darth Vader.</p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                    <img src="https://www.hollywoodreporter.com/wp-content/uploads/2014/11/star_wars_the_empire_strikes_back.jpg" class="card-img-top" alt=>
+                    <div class="card-body">
+                        <h5 class="card-title">Most Memorable Scene</h5>
+                        <p class="card-text">As the second installation of Star Wars Made it's rounds, echos engulfed every theater around the world... Fans of the original movie were shocked after the one of most memorable scenes of cinema introduce itself. Moments after severing Luke Skywalker's right hand, Vader delivers a blow to the heart of Luke and fans all around. "No, I am your father"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                <div class="card">
+                <img src="https://sm.ign.com/ign_nordic/feature/t/the-symbol/the-symbolism-of-han-solo-and-carbonite_n96z.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Trivia</h5>
+                    <p class="card-text">When Han Solo is about to be frozen, Princess Leia says, "I love you". In the original script, Han Solo was supposed to say "Just remember that, Leia, because I'll be back", but at the time of filming, Harrison Ford wasn't entirely certain he did want to come back for a third movie. There is a recurring legend that his line "I know" was ad-libbed. However, Alan Arnold's book "Once Upon A Galaxy: A Journal of the Making of The Empire Strikes Back" includes a transcription of the discussion between Ford and director Irvin Kershner in which Ford suggested the line.</p>
+                </div>
+                </div>
+                </div>
+                </div>
         `
     pageContents.appendChild(movieInfo)
     buttonContainer.innerHTML = homeButton
@@ -150,6 +165,35 @@ movie1.onclick = function() {
             <p>Director: ${movieArr.director}</p>
             <p>Release Date: ${movieArr.release_date}</p>
             <p>Opening Crawl: ${movieArr.opening_crawl}</p>
+            <div class="card mb-3">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/Darth-Maul_632eb5af.jpeg?region=0%2C44%2C1600%2C800" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Plot</h5>
+                    <p class="card-text">Set 32 years before the original trilogy, during the era of the Galactic Republic, the plot follows Jedi Master Qui-Gon Jinn and his apprentice Obi-Wan Kenobi as they try to protect Queen Padmé Amidala of Naboo in hopes of securing a peaceful end to an interplanetary trade dispute.</p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/image_d499abf8.jpeg?region=0%2C0%2C1560%2C878" class="card-img-top" alt=>
+                    <div class="card-body">
+                        <h5 class="card-title">Unwarranted Hatred?</h5>
+                        <p class="card-text">As the premier of a new trilogy releases, there was wedge driven between the fans. The movie was met with a plethora of complaints ranging from bad acting, bad writing, poor costume design, and argueably the most hated aspect of all, Jar Jar Binks. Even actors themselves came to hate the movie. Jake Lloyd, who played a young Anakin Skywalker, reported returning to school and being relentlessly bullied for his participation in the series.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                <div class="card">
+                <img src="https://www.themoviedb.org/t/p/original/5fu7fzy4NZTsL1Jap00UBIInAuB.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Trivia</h5>
+                    <p class="card-text">According to Jake Lloyd, there was a six-hour cut of the film that was screened for several people before the film was released, with those who saw it proclaiming it to be "mindbogglingly good". Like the later "Lost Cut" of Star Wars: Episode IV - A New Hope (1977), this cut has never been released publicly.</p>
+                    <p class="card-text">During filming, Ewan McGregor made lightsaber noises as he dueled. George Lucas explained many times that the sound effects would be added in by the special effects people later on. Ewan said "I kept getting carried away."</p>
+                </div>
+                </div>
+                </div>
+                </div>
         `
     pageContents.appendChild(movieInfo)
     buttonContainer.innerHTML = homeButton
@@ -167,8 +211,7 @@ movie2.onclick = function() {
             <p>Director: ${movieArr.director}</p>
             <p>Release Date: ${movieArr.release_date}</p>
             <p>Opening Crawl: ${movieArr.opening_crawl}</p>
-            <p> </p>
-        `
+            `
     pageContents.appendChild(movieInfo)
     buttonContainer.innerHTML = homeButton
     })
@@ -186,7 +229,37 @@ movie3.onclick = function() {
             <p>Director: ${movieArr.director}</p>
             <p>Release Date: ${movieArr.release_date}</p>
             <p>Opening Crawl: ${movieArr.opening_crawl}</p>
-        `
+            <div class="card mb-3">
+            <img src="https://www.themoviedb.org/t/p/original/hPO0A0BGg5M7Q8I7qayaDyC5tb5.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Plot</h5>
+                    <p class="card-text">It has been three years since the Clone Wars began. Jedi Master Obi-Wan Kenobi and Jedi Knight Anakin Skywalker rescue Chancellor Palpatine from General Grievous, the commander of the droid armies, but Grievous escapes. Suspicions are raised within the Jedi Council concerning Chancellor Palpatine, with whom Anakin has formed a bond. Asked to spy on the chancellor, and full of bitterness toward the Jedi Council, Anakin embraces the Dark Side.</p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                    <img src="https://images.alphacoders.com/697/697960.jpg" class="card-img-top" alt=>
+                    <div class="card-body">
+                        <h5 class="card-title">What Spawned After The End Of The Prequels?</h5>
+                        <p class="card-text">After Revenge of the Sith, and George Lucas sold the rights to Disney, there was some mystery surrounding what was to come of the star wars name. Luckily, before disney was sold the rights to Star Wars, Cartoon Network took a crack at the title and created one of the most beloved series among fans of every age. Star Wars the Clone Wars was an animated series consisting of a movie and 7 seasons. Although they had a rocky start, The ending carries one of the highest rating scores on all of IMDB. with the last arc, the conclusion of the clone wars, to be rated nothing lower than 9.7.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                <div class="card">
+                <img src="https://media.timeout.com/images/101557155/image.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Trivia</h5>
+                    <p class="card-text">Ewan McGregor and Hayden Christensen trained for two months in fencing and fitness in preparation for their epic battle. As a result of their practice, the speed at which Kenobi and Vader engage the duel (in the completed movie) is the speed in which it was filmed, and was not digitally accelerated.</p>
+                    <p class="card-text">A ten-year-old Han Solo was going to appear during the Battle of Kashyyyk, as an orphan being raised by Chewbacca. He would have helped locate General Grievous by finding part of a transmitter droid that was sending signals from Utapau, allowing Obi-Wan to find and confront the villain. Solo's young adult years were covered in Solo: A Star Wars Story (2018).</p>
+                    <p class="card-text">George Lucas deliberately made the Darth Vader suit top-heavy (for instance adding weight on the helmet) to make Hayden Christensen not appear "too accustomed" to it in the movie.</p>
+                </div>
+                </div>
+                </div>
+                </div>
+            `
     pageContents.appendChild(movieInfo)
     buttonContainer.innerHTML = homeButton
     })
@@ -1043,6 +1116,8 @@ function starshipsPage4() {
 
 const showMore = document.getElementById("showMore");
 const images = document.getElementsByTagName('img')
+
+
 
   
   function showImages() {
