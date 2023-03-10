@@ -26,7 +26,7 @@ homeButton.addEventListener('click', function () {
 })
 
 function homePage() {
-    window.location.href = "project.html";
+    window.location.href = "starwarsencyclopedia.surge.sh";
 }
 
 const movie1 = document.getElementById('movie1')
