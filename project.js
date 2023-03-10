@@ -84,12 +84,12 @@ movie4.onclick = function () {
                 </div>
                 </div>
                 </div>
+                </div>
             `
             pageContents.appendChild(movieInfo)
             buttonContainer.innerHTML = homeButton
         })
 }
-
 movie5.onclick = function() {
     movieImg.innerHTML = ""
     fetch("https://swapi.dev/api/films/2/")
@@ -148,6 +148,36 @@ movie6.onclick = function() {
             <p>Director: ${movieArr.director}</p>
             <p>Release Date: ${movieArr.release_date}</p>
             <p>Opening Crawl: ${movieArr.opening_crawl}</p>
+            <div class="card mb-3">
+            <img src="https://www.themoviedb.org/t/p/original/soJdiy91Mcyj29GzEgZ5svFcuZg.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Plot</h5>
+                    <p class="card-text">Luke Skywalker battles Jabba the Hutt and Darth Vader to save his comrades in the Rebel Alliance and triumph over the Galactic Empire. Han Solo and Princess Leia reaffirm their love, and team with Chewbacca, Lando Calrissian, the Ewoks, and droids C-3PO and R2-D2 to aid in the disruption of the Dark Side, and the defeat of the evil emperor.</p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                    <img src="https://insidethemagic.net/wp-content/uploads/2021/10/return-of-the-jedi-endor-celebration.jpeg" class="card-img-top" alt=>
+                    <div class="card-body">
+                        <h5 class="card-title">End of the Trilogy</h5>
+                        <p class="card-text">Return of the Jedi became the end of the trilogy with the defeat of the emperor and the empire. This trilogy spawned a massive fan base which funded the creation of the prequel series.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                <div class="card">
+                <img src="" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Trivia</h5>
+                    <p class="card-text">It took six people to work the full-sized animatronic of Jabba the Hutt. The puppet fit three men inside -- two to operate the arms, head and tongue and another to move the tail. A man lying below the puppet pulled strings to move Jabba's mouth and make his sides heave. And two radio operators controlled the slimy goon's eyes, including pupil dilation, direction and wideness of eyelids. A final crew member was responsible for rubbing gel on the puppet to give Jabba his slimy look</p>
+                    <p class="card-text">Admiral Ackbar's famous line "It's a trap!" was originally scripted as "It's a trick!" The line was changed in post-production after a negative test screening.</p>
+                    <p class="card-text">The growls and sounds of the Rancor in Jabba's Palace were actually made by a dachsund.</p>
+                </div>
+                </div>
+                </div>
+                </div>
         `
     pageContents.appendChild(movieInfo)
     buttonContainer.innerHTML = homeButton
@@ -211,7 +241,37 @@ movie2.onclick = function() {
             <p>Director: ${movieArr.director}</p>
             <p>Release Date: ${movieArr.release_date}</p>
             <p>Opening Crawl: ${movieArr.opening_crawl}</p>
-            `
+            <div class="card mb-3">
+            <img src="https://www.themoviedb.org/t/p/original/abwxHfymXGAbbH3lo9PDEJEfvtW.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Plot</h5>
+                    <p class="card-text">A decade after the Naboo invasion, Senator Padme Amidala is returning to Corusant when she instantly discovers that someone has put a price on her head. At the same time, the Galactic Republic is under pressure due to a separatist movement which is forcing Chancellor Palpatine to create a clone army to keep them safe from the growing threat. The Jedi Council dispatch Obi-Wan Kenobi to launch an investigation in who's behind Senator Amidala's assassination while his apprentice, a now grown Anakin Skywalker is assigned to keep watch over Amidala, while falling into a secret romance with her which goes against his vows as a Jedi. Meanwhile, renegade Jedi Count Dooku is preparing to go to war against the Jedi with a united droid army that could bring the Republic to it's knees.</p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                    <img src="https://www.themoviedb.org/t/p/original/uLxXHGR3031QE5ti8UtHjkeMpgr.jpg" class="card-img-top" alt=>
+                    <div class="card-body">
+                        <h5 class="card-title">With the introduction of the clones in this movie, many fans fell in love with this republic army. The TV series Star Wars: The Clone Wars became a huge hit thanks to the success of this movie.</h5>
+                        <p class="card-text"></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                <div class="card">
+                <img src="" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Trivia</h5>
+                    <p class="card-text">Samuel L. Jackson has said that the words "Bad mother-f*cker" are engraved on the hilt of his light-saber. The same words are famously printed on the wallet of Jackson's character Jules Winnfield in Pulp Fiction (1994).</p>
+                    <p class="card-text">When Jango Fett gets into his ship after his fight with Obi-Wan, he bangs his head on the partially open door. This was intentional, and is a reference to a famous goof from Star Wars: Episode IV - A New Hope (1977), where a stormtrooper accidentally bangs his head on a door.</p>
+                    <p class="card-text">Just before Anakin goes to search for his mother on Tatooine, he has a conversation with Senator Amidala. The camera pans to their shadows as they talk, and Anakin's resembles that of Darth Vader. According to the DVD commentary, the Vader-like shadow that Anakin casts was not a visual effect, but a coincidence.</p>
+                </div>
+                </div>
+                </div>
+                </div>
+        `
     pageContents.appendChild(movieInfo)
     buttonContainer.innerHTML = homeButton
     })
