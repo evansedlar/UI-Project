@@ -22,7 +22,7 @@ loadingScreen.style.display = "none"
 
 //Home Button
 homeButton.addEventListener('click', function () {
-    window.location.href = "project.html";
+    window.location.href = "http://starwarsencyclopedia.surge.sh";
 })
 
 function homePage() {
