@@ -1,5 +1,7 @@
 Star Wars Encyclopedia Website
 
+Welcome to the Star Wars Encyclopedia! This website is dedicated to providing information about the various planets, characters, species, starships, and vehicles that exist within the Star Wars universe. It is an extensive resource for fans of the Star Wars movies and TV shows, providing a wealth of information about the galaxy far, far away.
+
 Purpose of this app: 
 This app is a database for information pertaining to the star wars franchise.
 
